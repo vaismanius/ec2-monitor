@@ -3,7 +3,7 @@ services:
   ec2-monitor:
     build:
       dockerfile: dockerfile
-      image: ec2-monitor:latest
+    image: ec2-monitor:latest
     volumes:
       - ./.aws:/root/.aws/
     deploy:
@@ -11,4 +11,5 @@ services:
         condition: on-failure
         delay: 5s
         max_attempts: 20
-        
+
+    #command: bash -c "sleep 700"
