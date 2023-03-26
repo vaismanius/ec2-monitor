@@ -1,6 +1,7 @@
 # AWS credentials and config
-credentials
+.aws
 config
+credentials
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
