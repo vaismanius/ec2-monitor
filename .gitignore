@@ -1,5 +1,7 @@
 # AWS credentials and config
 text.txt
+credentials
+config
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
