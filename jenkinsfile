@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  
+  stages {
+    stage('Git Clone') {
+      steps {
+        cleanWs()
+        git branch: 'main', url: 'https://github.com/vaismanius/ec2-monitor.git'
+      }
+    }
+    
+    stage('Docker Build') {
+      steps {
+        script {
+          docker.build("ec2-monitor:${BUILD_NUMBER}")
+        }
+      }
+    }
+  }
+}
