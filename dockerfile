@@ -4,4 +4,4 @@ COPY app.py requirements.txt /app/
 RUN pip install -r requirements.txt && \
     apt update -y && \
     apt-get install -y awscli
-CMD python app.pydocker 
+CMD python app.py
