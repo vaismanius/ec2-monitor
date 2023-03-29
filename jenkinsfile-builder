@@ -12,7 +12,7 @@ pipeline {
     stage('Docker Build') {
       steps {
         script {
-          docker.build("ec2-monitor:latest")
+          docker.build("ec2-monitor:${env.BUILD_NUMBER}")
         }
       }
     }
