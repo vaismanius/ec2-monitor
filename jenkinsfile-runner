@@ -14,5 +14,3 @@ pipeline {
     }
 }
 
-
-def ${buildNumber} = Jenkins.instance.getItem('ec2-monitor-builder').lastSuccessfulBuild.number
