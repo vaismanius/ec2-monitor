@@ -1,0 +1,12 @@
+pipeline {
+  agent any
+    stage('Run built image') {
+      steps {
+        script {
+          sh "docker run -itd -v /home/ec2-user/.aws:/root/.aws
+           --name ec2-monitor ec2-monitor:${BUILD_NUMBER} "
+        }
+      }
+    }
+  }
+}
