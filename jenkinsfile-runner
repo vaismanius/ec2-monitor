@@ -5,6 +5,7 @@ pipeline {
             steps {
                 cleanWs()
                 script {
+                // The following line will probably fail your pipeline unless you enable a few in-proccess scrips in the Jenkins configuration.
                 def buildNumber = Jenkins.instance.getItem('ec2-monitor-builder').lastSuccessfulBuild.number
                 sh "sudo docker rm ec2-monitor"
                 sh "sudo docker run -v /home/ec2-user/.aws:/root/.aws --name ec2-monitor ec2-monitor:${buildNumber} "
